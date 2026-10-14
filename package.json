@@ -1,0 +1,10 @@
+{
+  "name": "pruebas-regresion-gestor-tareas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node servidor.js",
+    "test": "node --test tests/*.test.js"
+  }
+}
