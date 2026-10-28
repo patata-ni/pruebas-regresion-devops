@@ -13,7 +13,7 @@ export function filtrar(tareas, filtro = 'todas') {
 export function eliminar(tareas, id) {
   return tareas.filter(t => t.id !== id);
 }
-// ERROR INTENCIONAL: usa el índice de la lista filtrada sobre la lista original.
 export function eliminarVisible(tareas, filtro, indiceVisible) {
-  return tareas.filter((_, indice) => indice !== indiceVisible);
+  const tarea = filtrar(tareas, filtro)[indiceVisible];
+  return tarea ? eliminar(tareas, tarea.id) : [...tareas];
 }
